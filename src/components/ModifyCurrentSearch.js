@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import moment from "moment";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import SwapArrow from "../images/swap.svg";
 import Cancel from "../images/cancel.svg";
@@ -11,7 +11,7 @@ export default function ModifyCurrentSearch({
   to,
   date,
 }) {
-  let history = useHistory();
+  let history = useNavigate();
   const [formData, setFormData] = useState({
     from: from,
     to: to,

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import moment from "moment";
 
 import rightArrow from "../images/right.svg";
 import next from "../images/next.svg";
 
 export default function CurrentSearch({ onModifyClicked, from, to, date }) {
-  let history = useHistory();
+  let history = useNavigate();
   const [currentDate, setcurrentDate] = useState(date);
 
   function handlePreviousButton() {
