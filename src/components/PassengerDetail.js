@@ -14,7 +14,8 @@ import {
   selectSelectedBusData,
   selectDate,
 } from "../features/seats/seatsSlice";
-import { BsPersonCircle, SlEnvolopeLetter } from "react-icons/bs/sl";
+import { BsPersonCircle } from "react-icons/bs";
+import { SlEnvolopeLetter } from "react-icons/sl";
 import ContactForm from "./ContactForm";
 import checked from "../images/checked.svg";
 import moment from "moment";
