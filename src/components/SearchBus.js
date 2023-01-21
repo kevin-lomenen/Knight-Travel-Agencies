@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable array-callback-return */
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
@@ -92,11 +94,11 @@ export default function SearchBus() {
                   <span className="result-count">Found</span>
                 </h3>
                 {busSelectedId === ""
-                  ? data.length != 0 &&
+                  ? data.length !== 0 &&
                     data.map((eachbus) => {
                       return <EachBusData key={eachbus._id} data={eachbus} />;
                     })
-                  : data.length != 0 &&
+                  : data.length !== 0 &&
                     data.map((eachbus) => {
                       if (busSelectedId === eachbus._id)
                         return <EachBusData key={eachbus._id} data={eachbus} />;
