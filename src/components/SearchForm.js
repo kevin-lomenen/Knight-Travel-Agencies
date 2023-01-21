@@ -13,7 +13,7 @@ export default function SearchForm() {
     date: moment().format("YYYY-MM-DD"),
   });
 
-  const [cityData,] = useState([]);
+  const [cityData] = useState([]);
 
   // useEffect(() => {
   //   setCityData(getCity());
