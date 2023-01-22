@@ -1,7 +1,7 @@
 /* eslint-disable array-callback-return */
 import React, { useState } from "react";
 import moment from "moment";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { RiBuilding2Line } from 'react-icons/ri';
 
 // import CitiesData from "./cities.json";
@@ -26,15 +26,15 @@ export default function SearchForm() {
     });
   }
 
-  function handleSubmit(event) {
-    // eslint-disable-next-line eqeqeq
-    if (formData.from != "" && formData.to != "" && formData.date != "") {
-      history.push(
-        `/searchbus?from=${formData.from}&to=${formData.to}&date=${formData.date}`
-      );
-    }
-    event.preventDefault();
-  }
+  // function handleSubmit(event) {
+
+  //   if (formData.from !== "" && formData.to !== "" && formData.date !== "") {
+  //     history.push(
+  //       `/searchbus?from=${formData.from}&to=${formData.to}&date=${formData.date}`
+  //     );
+  //   }
+  //   event.preventDefault();
+  // }
 
   function handleToButton(event) {
     setFormData({
@@ -67,7 +67,7 @@ export default function SearchForm() {
 
   return (
     <>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form" >
         <div className="form-each-box">
           <RiBuilding2Line/>
           <input
@@ -149,9 +149,9 @@ export default function SearchForm() {
             className="form-input"
           ></input>
         </div>
-        <button type="submit" className="form-submit-button">
+        <Link to={`/searchbus?from=${formData.from}&to=${formData.to}&date=${formData.date}`} type="submit" className="form-submit-button">
           Search Buses
-        </button>
+        </Link>
       </form>
     </>
   );
